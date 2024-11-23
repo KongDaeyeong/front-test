@@ -6,6 +6,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 
+
 # 실행 스테이지
 FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
